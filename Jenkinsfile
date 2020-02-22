@@ -1,9 +1,15 @@
 pipeline {
+    environment {
+        registry = "planetacomputer/app-jenkins1"
+        registryCredential = ‘dockerhub’
+    }
     agent any
     stages { 
         stage('Push') { 
             steps { 
                  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')]) {
+                    sh 'echo $password'
+                    sh 'docker login -u $username -p $password'
                     sh 'docker push planetacomputer/app-jenkins1' 
                  }
             }  
