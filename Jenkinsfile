@@ -3,10 +3,9 @@ pipeline {
     stages { 
         stage('Push') { 
             steps { 
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')]) {
+                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')]) {
                     sh 'docker push planetacomputer/app-jenkins1' 
-                }
-            }         
+                 }
             }  
         } 
     } 
