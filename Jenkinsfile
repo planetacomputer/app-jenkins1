@@ -3,7 +3,7 @@ pipeline {
     stages { 
         stage('Push') { 
             steps { 
-                sh 'docker push czubeldia/app-jenkins1' 
+                sh 'docker push planetacomputer/app-jenkins1' 
             }  
         } 
     } 
