@@ -15,7 +15,7 @@ pipeline {
 
     stage('Test3') {
       steps {
-        echo 'Hola des de Test3'
+        echo 'Hola des de Test3 i adéu'
       }
     }
 
