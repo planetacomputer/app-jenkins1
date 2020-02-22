@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "planetacomputer/app-jenkins1"
-        registryCredential = ‘dockerhub’
+        registryCredential = 'dockerhub'
     }
     agent any
     stages { 
