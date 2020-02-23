@@ -25,7 +25,7 @@ pipeline {
                 echo 'Inestable' // Ejecuta si inestable
                 }
             failure { 
-                echo 'Fallo' // Ejecuta si falla
+                echo 'Fallo' // Ejecuta si fallas
                 }
         }
 }
