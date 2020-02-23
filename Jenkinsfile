@@ -9,7 +9,7 @@ pipeline {
             steps { 
                  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')]) {
                     sh 'docker login -u $user -p $password'
-                    sh 'docker push planetacomputer/app-jenkins1:stable'
+                    sh 'docker push planetacomputer/app-jenkins1'
                  }
             }  
         } 
